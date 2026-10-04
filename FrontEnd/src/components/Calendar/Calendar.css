@@ -1,90 +1,161 @@
-.css-u0soqy-MuiPickerStaticWrapper-root {
-  box-shadow: 3px 2px 10px 5px #888888 !important;
+/* =========================================================
+   CALENDAR CONTAINER
+   ========================================================= */
+
+.MuiPickerStaticWrapper-root {
+  width: 100% !important;
+  box-shadow: none !important;
 }
 
-.css-hlj6pa-MuiDialogActions-root {
-  display: none !important;
-}
+.MuiPickersLayout-root {
+  display: flex !important;
+  flex-direction: column !important;
 
-.css-j88s13-MuiPickersToolbar-root-MuiDatePickerToolbar-root
-  .MuiPickersToolbar-penIconButton {
-  display: none !important;
-}
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
 
-.css-j88s13-MuiPickersToolbar-root-MuiDatePickerToolbar-root {
+  margin: 0 !important;
   padding: 0 !important;
+
+  border-radius: 10px !important;
+
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+
+  overflow: hidden !important;
 }
 
-.css-hq2kpw-MuiGrid-root-MuiPickersToolbar-content {
-  justify-content: center !important;
-  background-color: orange;
-  padding: 1rem;
-}
 
-.MuiPickersToolbar-root.MuiPickersLayout-toolbar.css-1eurbeq-MuiPickersToolbar-root-MuiDatePickerToolbar-root {
-  background-color: orange;
-  height: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: none;
-}
+/* =========================================================
+   HIDE UNUSED TOOLBAR / ACTIONS
+   ========================================================= */
 
-h4.MuiTypography-root.MuiTypography-h4.MuiTypography-alignCenter.MuiDatePickerToolbar-title.css-3jvy96-MuiTypography-root-MuiDatePickerToolbar-title {
-  font-size: 16px;
-}
-
-.css-4pax7l-MuiPickersLayout-root .MuiPickersLayout-actionBar {
-  display: none;
-}
-
-.MuiPickersLayout-root.css-4pax7l-MuiPickersLayout-root {
-  display: flex;
-  color: var(--text);
-  flex-direction: column;
-  max-width: 320px;
-  margin: none;
-  min-width: 100px;
-  overflow-y: scroll;
-  padding: 0;
-  transition: none;
-  border-radius: 10px;
-  background-color: var(--bg);
-}
-
-button.MuiButtonBase-root.MuiPickersDay-root.MuiPickersDay-dayWithMargin.css-jgls56-MuiButtonBase-root-MuiPickersDay-root {
-  color: var(--text);
-  border: 1px solid rgb(122, 122, 201);
-}
-
-.MuiPickersLayout-root.css-4pax7l-MuiPickersLayout-root::-webkit-scrollbar {
-  background-color: var(--bg);
-  display: none;
-}
-
-/* Calendar icons and normal dates */
-svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeInherit.css-1vooibu-MuiSvgIcon-root,
-button.MuiButtonBase-root.MuiPickersDay-root.MuiPickersDay-dayWithMargin.css-1u23akw-MuiButtonBase-root-MuiPickersDay-root,
-span.MuiTypography-root.MuiTypography-caption.css-rhmlg1-MuiTypography-root-MuiDayCalendar-weekDayLabel,
-svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiPickersCalendarHeader-switchViewIcon.css-1tkx1wf-MuiSvgIcon-root-MuiPickersCalendarHeader-switchViewIcon {
-  color: var(--text);
-}
-
-.MuiDateCalendar-root.css-1q04gal-MuiDateCalendar-root {
-  overflow-y: scroll;
-}
-
-.MuiDateCalendar-root.css-1q04gal-MuiDateCalendar-root::-webkit-scrollbar {
-  display: none;
-}
-
-.css-1hbyad5-MuiTypography-root {
+.MuiPickersLayout-actionBar {
   display: none !important;
 }
+
+.MuiPickersToolbar-root {
+  display: none !important;
+}
+
+
+/* =========================================================
+   DATE CALENDAR
+   ========================================================= */
+
+.MuiDateCalendar-root {
+  width: 100% !important;
+  max-width: 100% !important;
+
+  min-height: 0 !important;
+
+  overflow: hidden !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+
+/* =========================================================
+   CALENDAR HEADER
+   ========================================================= */
+
+.MuiPickersCalendarHeader-root {
+  margin-top: 0 !important;
+  margin-bottom: 4px !important;
+
+  padding-left: 14px !important;
+  padding-right: 14px !important;
+
+  min-height: 48px !important;
+
+  color: var(--text) !important;
+}
+
+.MuiPickersCalendarHeader-label {
+  color: var(--text) !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
+
+
+/* Header arrows */
+.MuiPickersArrowSwitcher-button {
+  color: var(--text) !important;
+}
+
+
+/* =========================================================
+   WEEKDAY HEADER
+   ========================================================= */
+
+.MuiDayCalendar-header {
+  display: grid !important;
+  grid-template-columns: repeat(7, 1fr) !important;
+
+  width: 100% !important;
+
+  margin: 0 !important;
+}
+
+.MuiDayCalendar-weekDayLabel {
+  color: var(--text) !important;
+
+  width: 100% !important;
+
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+
+
+/* =========================================================
+   DAYS GRID
+   ========================================================= */
+
+.MuiDayCalendar-monthContainer {
+  width: 100% !important;
+}
+
+.MuiDayCalendar-weekContainer {
+  display: grid !important;
+  grid-template-columns: repeat(7, 1fr) !important;
+
+  width: 100% !important;
+
+  margin: 2px 0 !important;
+}
+
+
+/* =========================================================
+   INDIVIDUAL DAYS
+   ========================================================= */
+
+.MuiPickersDay-root {
+  width: 34px !important;
+  height: 34px !important;
+
+  margin: auto !important;
+
+  color: var(--text) !important;
+
+  font-size: 13px !important;
+}
+
+
+/* Today's date */
+.MuiPickersDay-root.MuiPickersDay-today {
+  color: var(--text) !important;
+  border: 1px solid rgb(122, 122, 201) !important;
+}
+
 
 /* =========================================================
    SELECTED DATE
-   Previous light-blue circle restored
+   Previous light-blue style
    ========================================================= */
 
 .MuiPickersDay-root.Mui-selected {
@@ -96,24 +167,80 @@ svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiPickersCalendarHeader-switchVie
   background-color: #3081d0 !important;
 }
 
-/* Keep selected date blue in dark mode too */
+
+/* Dark mode selected date */
 [data-theme="dark"] .MuiPickersDay-root.Mui-selected {
   background-color: #3081d0 !important;
   color: white !important;
 }
 
-/* Non-selected calendar dates */
+
+/* =========================================================
+   CALENDAR ICONS
+   ========================================================= */
+
+.MuiPickersCalendarHeader-switchViewIcon {
+  color: var(--text) !important;
+}
+
+.MuiSvgIcon-root {
+  color: var(--text);
+}
+
+
+/* =========================================================
+   BADGE / CHECK ICON
+   ========================================================= */
+
+.MuiBadge-badge {
+  color: green !important;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+.MuiDateCalendar-root::-webkit-scrollbar,
+.MuiPickersLayout-root::-webkit-scrollbar {
+  display: none !important;
+}
+
+
+/* =========================================================
+   REMOVE OLD MUI SPACING
+   ========================================================= */
+
 .MuiPickersDay-root:not(.Mui-selected) {
-  border-color: transparent !important;
+  border-color: transparent;
 }
 
-/* Badge/check icon */
-.css-144dnr3-MuiBadge-badge {
-  color: green;
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .MuiPickersDay-root {
+    width: 32px !important;
+    height: 32px !important;
+
+    font-size: 12px !important;
+  }
+
+  .MuiPickersCalendarHeader-root {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
 }
 
-/* Calendar background */
-.css-1n2mv2k {
-  background-color: #f4f4f4;
-  margin-bottom: 1rem;
+@media (max-width: 900px) {
+  .MuiPickersDay-root {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  .MuiPickersCalendarHeader-label {
+    font-size: 15px !important;
+  }
 }
