@@ -29,12 +29,15 @@
   align-items: center;
   display: none;
 }
+
 h4.MuiTypography-root.MuiTypography-h4.MuiTypography-alignCenter.MuiDatePickerToolbar-title.css-3jvy96-MuiTypography-root-MuiDatePickerToolbar-title {
   font-size: 16px;
 }
+
 .css-4pax7l-MuiPickersLayout-root .MuiPickersLayout-actionBar {
   display: none;
 }
+
 .MuiPickersLayout-root.css-4pax7l-MuiPickersLayout-root {
   display: flex;
   color: var(--text);
@@ -48,18 +51,21 @@ h4.MuiTypography-root.MuiTypography-h4.MuiTypography-alignCenter.MuiDatePickerTo
   border-radius: 10px;
   background-color: var(--bg);
 }
-button.MuiButtonBase-root.MuiPickersDay-root.MuiPickersDay-dayWithMargin.MuiPickersDay-today.css-jgls56-MuiButtonBase-root-MuiPickersDay-root {
+
+button.MuiButtonBase-root.MuiPickersDay-root.MuiPickersDay-dayWithMargin.css-jgls56-MuiButtonBase-root-MuiPickersDay-root {
   color: var(--text);
   border: 1px solid rgb(122, 122, 201);
 }
+
 .MuiPickersLayout-root.css-4pax7l-MuiPickersLayout-root::-webkit-scrollbar {
   background-color: var(--bg);
   display: none;
 }
 
+/* Calendar icons and normal dates */
 svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeInherit.css-1vooibu-MuiSvgIcon-root,
 button.MuiButtonBase-root.MuiPickersDay-root.MuiPickersDay-dayWithMargin.css-1u23akw-MuiButtonBase-root-MuiPickersDay-root,
-span.MuiTypography-root.MuiTypography-caption.MuiDayCalendar-weekDayLabel.css-rhmlg1-MuiTypography-root-MuiDayCalendar-weekDayLabel,
+span.MuiTypography-root.MuiTypography-caption.css-rhmlg1-MuiTypography-root-MuiDayCalendar-weekDayLabel,
 svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiPickersCalendarHeader-switchViewIcon.css-1tkx1wf-MuiSvgIcon-root-MuiPickersCalendarHeader-switchViewIcon {
   color: var(--text);
 }
@@ -67,30 +73,46 @@ svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiPickersCalendarHeader-switchVie
 .MuiDateCalendar-root.css-1q04gal-MuiDateCalendar-root {
   overflow-y: scroll;
 }
+
 .MuiDateCalendar-root.css-1q04gal-MuiDateCalendar-root::-webkit-scrollbar {
   display: none;
 }
+
 .css-1hbyad5-MuiTypography-root {
   display: none !important;
 }
 
-.css-bkrceb-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
-  background-color: orange !important;
+/* =========================================================
+   SELECTED DATE
+   Previous light-blue circle restored
+   ========================================================= */
+
+.MuiPickersDay-root.Mui-selected {
+  background-color: #3081d0 !important;
+  color: white !important;
 }
 
-.css-195y93z-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
-  background-color: orange !important;
-  color: black !important;
+.MuiPickersDay-root.Mui-selected:hover {
+  background-color: #3081d0 !important;
 }
-.css-195y93z-MuiButtonBase-root-MuiPickersDay-root:not(.Mui-selected) {
+
+/* Keep selected date blue in dark mode too */
+[data-theme="dark"] .MuiPickersDay-root.Mui-selected {
+  background-color: #3081d0 !important;
+  color: white !important;
+}
+
+/* Non-selected calendar dates */
+.MuiPickersDay-root:not(.Mui-selected) {
   border-color: transparent !important;
-  color: orange;
 }
 
+/* Badge/check icon */
 .css-144dnr3-MuiBadge-badge {
   color: green;
 }
 
+/* Calendar background */
 .css-1n2mv2k {
   background-color: #f4f4f4;
   margin-bottom: 1rem;
