@@ -4,7 +4,7 @@
   "description": "Task Manager Backend",
   "main": "index.js",
   "engines": {
-  "node": ">=22 <25"
+    "node": ">=22 <25"
   },
   "scripts": {
     "start": "node index.js",
@@ -33,6 +33,6 @@
     "passport-local": "^1.0.0"
   },
   "devDependencies": {
-    "dotenv": "^16.4.7"
+    "dotenv": "^16.6.1"
   }
 }
