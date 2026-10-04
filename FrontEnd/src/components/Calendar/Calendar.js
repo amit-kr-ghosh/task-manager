@@ -10,18 +10,18 @@ import "./Calendar.css";
 
 const Calendar = () => {
   const [value, setValue] = useState(new Date());
-  const [highlightedDays, setHighlightedDays] = useState([1, 2, 13]);
+  const [highlightedDays] = useState([1, 2, 13]);
+
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <StaticDatePicker
-        // mask='____/__/__'
         variant="static"
         orientation="portrait"
         value={value}
         disableFuture
         onChange={(newValue) => setValue(newValue)}
         renderInput={(params) => {
-          <TextField {...params} />;
+          return <TextField {...params} />;
         }}
         renderDay={(day, _value, DayComponentProps) => {
           const isSelected =
